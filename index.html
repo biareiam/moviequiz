@@ -8,12 +8,10 @@
     <meta name="keyword" content="quiz, trivia, movie, quiz movie, trivia movie">
     <meta name="description" content="It is a movie trivia, in which people show answer 15 questions movie related.">
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>Movie Trivia</title>
 </head>
 
 <body>
-
     <main class="hero-image">
         <div class="home-box custom-box">
             <h1>Welcome to the Movie Trivia</h1>
@@ -29,16 +27,61 @@
             </div>
         </div>
         <div class="quiz-box custom-box hide" id="questions">
-            <div>
-                <span id="timer"></span>
+            <div class="clock-timer">
+                <div>
+                    <span id="timer"></span>
+                </div>
+            </div>
+            <div class="question-number">
+            </div>
+            <div class="question-text">
+            </div>
+            <div class="option-container">
+            </div>
+            <div class="next-question-btn">
+                <button type="button" class="btn leave-btn" id="leave-button" onclick="leaveQuiz()">Quit <i
+                        class="far fa-times-circle"></i></button>
+                <button type="button" class="btn next-btn" id="next-button" onclick="next()">Next <i
+                        class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="answer-indicator">
+            </div>
+            <div class="bonus-fact">
             </div>
         </div>
-
-
-
-
-
-
+        <div class="result-box custom-box hide" id="results">
+            <h1>Quiz Result <i class="fas fa-crown" id="crown"></i></h1>
+            <table>
+                <tr>
+                    <td>Total Question</td>
+                    <td><span class="total-question"></span></td>
+                </tr>
+                <tr>
+                    <td>Attempts</td>
+                    <td><span class="total-attempt"></span></td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td><span class="total-correct"></span></td>
+                </tr>
+                <tr>
+                    <td>Incorrect</td>
+                    <td><span class="total-wrong"></span></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><span class="percentage"></span></td>
+                </tr>
+                <tr>
+                    <td>Your Total Score</td>
+                    <td><span class="total-score"></span></td>
+                </tr>
+            </table>
+            <button type="button" class="btn try-again" onclick="tryAgainQuiz()">Try Again <i class="fas fa-undo"
+                    id="undo"></i></button>
+            <button type="button" class="btn quit" onclick="goToHome()">Go to Home <i class="fas fa-home"
+                    id="home"></i></button>
+        </div>
     </main>
     <!--Fontawsome-->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
