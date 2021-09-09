@@ -60,34 +60,44 @@ body {
 
 
 .home-box h1 {
-    font-size: 33px;
-    letter-spacing: 4px;
-    padding-bottom: 10px;
-}
-
-.home-box h2 {
-    font-size: 19px;
-    padding-bottom: 20px;
-}
-
-.home-box h3 {
-    font-size: 18px;
-}
-
-.home-box>p {
-    font-size: 16px;
-}
-
-.home-box h1,
-.home-box h2,
-.home-box h3,
-.home-box>p {
+    font-size: 30px;
     color: #ffffff;
     font-weight: 500;
     margin-bottom: 15px;
     line-height: 25px;
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.home-box h2 {
+    font-size: 19px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.home-box h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+    text-align: center;
+
+}
+
+.home-box>p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
 }
 
 #luck {
@@ -114,4 +124,464 @@ body {
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+}
+
+/* timer*/
+#timer {
+    float: right;
+    color: rgb(49, 79, 247);
+    margin-bottom: -25px;
+    font-weight: 600;
+}
+
+/*quiz box*/
+.quiz-box .question-number,
+.quiz-box .question-text,
+.quiz-box .option-container,
+.quiz-box .next-question-btn,
+.quiz-box .answer-indicator {
+    width: 100%;
+    float: left;
+}
+
+.quiz-box .question-number {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.quiz-box .question-text {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.quiz-box .option-container .option {
+    background-color: #cccccca8;
+    padding: 13px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #0a0a0a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.quiz-box .option-container .option.correct::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.459);
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-box .option-container .option.correct {
+    color: #ffffff;
+
+}
+
+.quiz-box .option-container .option.wrong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 0, 0, 0.651);
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.quiz-box .option-container .option.wrong {
+    color: #ffffff;
+}
+
+.quiz-box .option-container .option.already-answered {
+    pointer-events: none;
+}
+
+
+.quiz-box .btn {
+    margin: 15px 0;
+    background-color: #b60c2b;
+
+}
+
+#start {
+    font-weight: bold;
+}
+
+#start:hover {
+    background-color: seashell;
+    color: #b60c2b;
+}
+
+
+.quiz-box .answer-indicator {
+    border-top: 1px solid #cccccc4b;
+}
+
+.quiz-box .answer-indicator div {
+    height: 37px;
+    width: 37px;
+    display: inline-block;
+    background-color: #cccccc2c;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+
+.quiz-box .answer-indicator div.correct {
+    background-color: rgba(0, 128, 0, 0.459);
+    background-image: url('../pic/correct.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.quiz-box .answer-indicator div.wrong {
+    background-color: rgba(128, 0, 0, 0.651);
+    background-image: url('../pic/wrong.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#next-button {
+    background-color: rgb(42, 122, 62);
+}
+
+
+#leave-button {
+    background-color: rgb(207, 68, 68);
+}
+
+#crown {
+    color: rgb(248, 216, 34);
+}
+
+
+.result-box {
+    text-align: center;
+}
+
+.result-box .hide {
+    display: none;
+}
+
+.result-box h1 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #ffffff;
+}
+
+.result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background-color: rgba(128, 128, 128, 0.288);
+    color: #ffffff;
+}
+
+
+.result-box table td {
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    width: 50%;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+}
+
+.result-box .btn {
+    margin-right: 20px;
+
+}
+
+.try-again {
+    background-color: seagreen;
+}
+
+.quit {
+    background-color: rgb(97, 87, 187);
+}
+
+.home-box-leave {
+    color: white;
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+
+    .custom-box {
+        margin-top: 150px;
+    }
+
+    #questions {
+
+        margin-left: 340px;
+    }
+
+    #results {
+        margin-left: 100px;
+
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1280px) {}
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+    body {
+        background-color: rgb(0, 0, 65);
+
+    }
+
+    .custom-box {
+        margin-top: 120px;
+    }
+
+
+    #questions {
+
+        margin-left: 140px;
+    }
+
+    #results {
+        margin-left: 100px;
+
+    }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        background-color: rgb(112, 112, 119);
+        height: 770px;
+    }
+
+    .custom-box {
+        margin-top: 150px;
+    }
+
+    #questions {
+
+        margin-left: 5px;
+    }
+
+    #results {
+        margin-left: 70px;
+
+    }
+
+}
+
+
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 375px) and (max-width: 480px) {
+
+    body {
+        background-color: rgb(185, 137, 139);
+
+    }
+
+    .custom-box {
+        margin-top: 60px;
+        height: 670px;
+    }
+
+    .home-box h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .home-box h2 {
+        line-height: 30px;
+        width: 80%;
+        margin-left: 60px;
+    }
+
+    #start {
+        margin-top: 40px;
+    }
+
+    #questions {
+        height: 520px;
+        margin-left: 0px;
+        margin-top: 90px;
+
+    }
+
+    #results {
+        margin-left: 0px;
+        height: 525px;
+        margin-top: 70px;
+
+    }
+
+    .result-box .btn {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .quit {
+        padding: 15px 35px;
+    }
+
+
+
+}
+
+@media (min-width:320px)and (max-width: 376px) {
+    body {
+        background-color: rgba(233, 233, 83, 0.541);
+
+    }
+
+    .custom-box {
+        margin-top: 85px;
+        height: 650px;
+    }
+
+    .home-box h1 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: -20px;
+    }
+
+    .home-box h2 {
+        line-height: 30px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    #luck {
+        margin-top: -10px;
+    }
+
+    #questions {
+        height: 605px;
+        margin-left: 0px;
+        margin-top: 30px;
+
+    }
+
+    #results {
+        margin-left: 0px;
+        height: 570px;
+        margin-top: 20px;
+
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        background-color: rgba(83, 233, 128, 0.541);
+    }
+
+    #questions {
+        height: 610px;
+        margin-top: 20px;
+    }
+
+    #results {
+
+        height: 620px;
+    }
+
+    .result-box .btn {
+
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .quit {
+        padding: 15px 35px;
+    }
+
+    #timer {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    #next-button,
+    #leave-button {
+        margin-right: 10px;
+        padding: 15px 31px;
+    }
+
+
+
 }
