@@ -52,5 +52,66 @@ body {
 
 .custom-box.hide {
     display: none;
+}
 
+.start-btn {
+    text-align: center;
+}
+
+
+.home-box h1 {
+    font-size: 33px;
+    letter-spacing: 4px;
+    padding-bottom: 10px;
+}
+
+.home-box h2 {
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.home-box h3 {
+    font-size: 18px;
+}
+
+.home-box>p {
+    font-size: 16px;
+}
+
+.home-box h1,
+.home-box h2,
+.home-box h3,
+.home-box>p {
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#luck {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fcfcfc;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.home-box .btn {
+    margin-top: 10px;
+    background-color: rgb(207, 68, 68);
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.btn {
+    padding: 15px 45px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
 }
