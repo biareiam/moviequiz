@@ -209,7 +209,16 @@ function quizOver() {
 /**
  * This function will calculate the result of the quiz.
  */
-function quizResult() {}
+function quizResult() {
+    resultBox.querySelector(".total-question").innerHTML = questionLimit;
+    resultBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    resultBox.querySelector(".total-wrong").innerHTML = questionLimit - correctAnswers;
+
+    const percentage = (correctAnswers / questionLimit) * 100;
+    resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
+    resultBox.querySelector(".total-score").innerHTML = correctAnswers + "/" + questionLimit;
+}
 
 /**
  * Once the quiz is finished and the user was able to see the results, if desired
