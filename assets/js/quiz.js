@@ -34,9 +34,25 @@ function getNewQuestion() {
     questionText.innerHTML = currentQuestion.questionCounter;
     //console.log(questionIdex);
 
+    // get the position of the questionIndec from the availableQuestion array
+    const index1 = availableQuestions.indexOf(questionIndex);
+    // cosole.log(index1);
+    // console.log(questionIndex);
+
+    // if a question was already picked, it should not come up again
+    availableQuestions.splice(index1, 1);
+    // console.log(availableQuestions);
+
+    // set alternatives
+    // first get their length. They will be also displayed randomly each time.
+
+
+
+
+
+
+
     questionCounter++;
-
-
 }
 
 
