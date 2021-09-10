@@ -5,6 +5,7 @@ const optionContainer = document.querySelector(".option-container");
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
+let availableOptions = [];
 
 /**
  * This fuction will put the questions into an array and iterate through it.
@@ -45,7 +46,26 @@ function getNewQuestion() {
 
     // set alternatives
     // first get their length. They will be also displayed randomly each time.
+    // console.log(currentQuestin.options);
 
+    const optionLen = currentQuestion.options.length;
+    // like with the questions, the options will be pushed into and 
+    // empty array and interate though.
+    for (let i = 0; i < optionLen; i++) {
+        availableOptions.push(i);
+    }
+
+    // create options in inner HTML
+
+    for (let i = 0; i < optionLen; i++) {
+        const option = document.createElement("div");
+        option.innerHTML = currentQuestion.options[i];
+        option.id = i;
+        option.className = "option";
+        optionContainer.appendChild(option);
+
+
+    }
 
 
 
