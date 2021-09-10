@@ -1,11 +1,18 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
+const answerIndicatorContainer = document.querySelector(".answers-indicator");
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box");
+
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let availableOptions = [];
+let correctAnswers = 0;
+let attempt = 0;
 
 /**
  * This fuction will put the questions into an array and iterate through it.
@@ -104,10 +111,18 @@ function getResult(element) {
 
         // set the color green for right answer
         element.classList.appendChild("correct");
+        // add the indicator tp correct mark
+        updateAnswerIndicator("correct");
+
+        correctAnswers++;
+        //console.log(correctAnswers);
     } else {
         // console.log(" wrong answer");
         // set the color red for wrong answer
+
         element.classList.appendChild("wrong");
+        // add the indicator tp incorrect mark
+        updateAnswerIndicator("wrong");
 
         // if the answer is incorrenct, show the right one by adding the green color to it
         const optionLen = optionContainer.children.length;
@@ -117,6 +132,7 @@ function getResult(element) {
             }
         }
     }
+    attempt++;
     unclickableOptions();
 }
 
@@ -137,8 +153,25 @@ function unclickableOptions() {
  * right one or not. So if eather, the user was correct or wrong
  */
 
-function answerIndicator() {}
+function answerIndicator() {
+    answerIndicatorContainer.innerHTML = '';
+    const totalQuestion = quiz.length;
+    for (let i = 0; i < totalQuestion; i++) {
+        const indicator = document.createElement("div");
+        answerIndicatorContainer.appendChild(indicator);
+    }
+}
 
+
+/**
+ * This fucntion will update the markType
+ */
+
+function updateAnswerIndicator(markType) {
+    // console.log(markType);
+    answerIndicatorContainer.children[questionCounter - 1].classList.add(markType);
+
+}
 
 /**
  * This fuction will indicate what will happen when the user clicks
@@ -148,6 +181,7 @@ function answerIndicator() {}
 function next() {
     if (questionCounter === quiz.length) {
         //console.log("quiz over");
+        quizOver();
     } else {
         getNewQuestion();
     }
@@ -164,7 +198,13 @@ function leaveQuiz() {}
  * This fuction will execute once the quiz is over.
  */
 
-function quizOver() {}
+function quizOver() {
+    // hide quiz box
+    quizBox.classList.add("hide");
+    // show result box
+    resultBox.classList.remove("hide");
+    quizResult();
+}
 
 /**
  * This function will calculate the result of the quiz.
@@ -199,6 +239,9 @@ function startQuiz() {
     setAvailableQuestions();
     // A new question will be selected randomly
     getNewQuestion();
+    // to create an indicator of answer
+    answerIndicator();
+
 }
 
 
