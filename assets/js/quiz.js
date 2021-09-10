@@ -1,11 +1,17 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
-const answerIndicatorContainer = document.querySelector(".answers-indicator");
+const answerIndicatorContainer = document.querySelector(".answer-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
+const nextButton = document.querySelector(".next-btn");
+const leaveButton = document.querySelectorAll(".leave-btn");
+const leave = document.querySelectorAll(".home-box-leave");
 
+const questionLimit = 15; // limiting the number of questions b=being displayed at the time.
+
+var timer = document.querySelector("#timer");
 
 let questionCounter = 0;
 let currentQuestion;
@@ -21,10 +27,8 @@ let attempt = 0;
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
     for (let i = 0; i < totalQuestion; i++) {
-        // console.log(i);
         availableQuestions.push(quiz[i]);
     }
-    //console.log(availableQuestions);
 }
 
 /**
@@ -34,12 +38,12 @@ function setAvailableQuestions() {
 function getNewQuestion() {
 
     // set question number
-    questionNumber.innerHTML = "Question " + (questionCounter + 1) + "of" + quiz.length;
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
 
     // set question itself randomly
-    const questionIdex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
-    currentQuestion = questionIdex;
-    questionText.innerHTML = currentQuestion.questionCounter;
+    const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    currentQuestion = questionIndex;
+    questionText.innerHTML = currentQuestion.question;
     //console.log(questionIdex);
 
     // get the position of the questionIndec from the availableQuestion array
@@ -74,7 +78,6 @@ function getNewQuestion() {
         const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
         // get the position of the alternatives by index from the available options
         const index2 = availableOptions.indexOf(optonIndex);
-
         // make sure that the alternatives are not repeated
         availableOptions.splice(index2, 1);
         // console.log(optonIndex);
@@ -85,9 +88,9 @@ function getNewQuestion() {
 
         const option = document.createElement("div");
         option.innerHTML = currentQuestion.options[optonIndex];
-        option.id = i;
-        option.style.animationDelay = animationDelay + "s";
-        animetionDelay = animetionDelay + 0.15;
+        option.id = optonIndex;
+        option.style.animationDelay = animationDelay + 's';
+        animationDelay = animationDelay + 0.15;
         option.className = "option";
         optionContainer.appendChild(option);
         option.setAttribute("onclick", "getResult(this)");
@@ -110,30 +113,31 @@ function getResult(element) {
         //console.log("answer is corrent");
 
         // set the color green for right answer
-        element.classList.appendChild("correct");
+        element.classList.add("correct");
         // add the indicator tp correct mark
         updateAnswerIndicator("correct");
 
         correctAnswers++;
         //console.log(correctAnswers);
+        unclickableOptions();
     } else {
         // console.log(" wrong answer");
         // set the color red for wrong answer
 
-        element.classList.appendChild("wrong");
+        element.classList.add("wrong");
         // add the indicator tp incorrect mark
         updateAnswerIndicator("wrong");
-
+        unclickableOptions();
         // if the answer is incorrenct, show the right one by adding the green color to it
         const optionLen = optionContainer.children.length;
         for (let i = 0; i < optionLen; i++) {
             if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
+                optionContainer.children[i].classList.add("correct");
 
             }
         }
+        attempt++;
     }
-    attempt++;
-    unclickableOptions();
 }
 
 /**
@@ -155,7 +159,7 @@ function unclickableOptions() {
 
 function answerIndicator() {
     answerIndicatorContainer.innerHTML = '';
-    const totalQuestion = quiz.length;
+    const totalQuestion = questionLimit;
     for (let i = 0; i < totalQuestion; i++) {
         const indicator = document.createElement("div");
         answerIndicatorContainer.appendChild(indicator);
@@ -168,10 +172,10 @@ function answerIndicator() {
  */
 
 function updateAnswerIndicator(markType) {
-    // console.log(markType);
+    //console.log(markType);
     answerIndicatorContainer.children[questionCounter - 1].classList.add(markType);
-
 }
+
 
 /**
  * This fuction will indicate what will happen when the user clicks
@@ -179,33 +183,74 @@ function updateAnswerIndicator(markType) {
  * the quiz show be over, otherwise, the fuction shows gets the next question.
  */
 function next() {
-    if (questionCounter === quiz.length) {
-        //console.log("quiz over");
-        quizOver();
+    if (questionCounter === questionLimit) {
+        setTimeout(function () {
+            quizBox.classList.add("hide");
+            resultBox.classList.remove("hide");
+            quizResult();
+        }, 500);
+        //timer stops 
+        setTimeout(function () {
+            clearInterval(timerInterval)
+        }, 500);
+        //if not all questions are answered, go to next question
     } else {
         getNewQuestion();
     }
 }
 
+/**
+ * The fuction will set a timer to the quiz
+ */
+
+//Timer function
+var secondsLeft = 120;
+var timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function () {
+        secondsLeft--;
+        timer.textContent = "Time: " + secondsLeft + " sec";
+
+        //if run out of time, go straight to user initial page to record score
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+
+            quizBox.classList.add("hide");
+            homeBox.classList.remove("hide");
+            alert("Sorry, You are out of time!");
+            resetQuiz();
+        }
+    }, 1000);
+
+    return timerInterval;
+}
 
 /**
  * This fuction will execute if the user decide to leave the quiz while
  * in the middle of it. They will be redirected to the home page.
  */
-function leaveQuiz() {}
+function leaveQuiz() {
+    // show home box
+    homeBox.classList.remove("hide");
+    //hide quiz quiz-box
+    quizBox.classList.add("hide");
+    resetQuiz();
+    startTimer();
+    secondsLeft = 120;
+}
 
 /**
  * This fuction will execute once the quiz is over.
  */
 
 function quizOver() {
-    // hide quiz box
+    //hide quiz quiz-box
     quizBox.classList.add("hide");
-    // show result box
+    // show result Box
     resultBox.classList.remove("hide");
     quizResult();
 }
-
 /**
  * This function will calculate the result of the quiz.
  */
@@ -226,9 +271,9 @@ function quizResult() {
  * go home button
  */
 function goToHome() {
-    // hide result box
+    // hide results box
     resultBox.classList.add("hide");
-    // show the home box
+    //show home box 
     homeBox.classList.remove("hide");
     resetQuiz();
 }
@@ -241,13 +286,14 @@ function goToHome() {
  * executed, reseting the quiz.
  */
 function tryAgainQuiz() {
-    // hide the results box
-    resultBox.classList.add("hide");
-    // show the quiz box
+    // hide the resultBox
+    resultBox.classList.add("hide")
+    // show quiz box
     quizBox.classList.remove("hide");
-
+    // reset the quiz
     resetQuiz();
-    startQuiz();
+    secondsLeft = 120;
+    startQuiz()
 
 }
 
@@ -270,18 +316,14 @@ function startQuiz() {
     quizBox.classList.remove("hide");
     // first the questions will be selected
     setAvailableQuestions();
+    // start timer
+    startTimer();
     // A new question will be selected randomly
     getNewQuestion();
     // to create an indicator of answer
     answerIndicator();
 
 }
-
-
-
-
-
-
 /**
  * This function will say what will happen as soon as the page is loaded
  */
