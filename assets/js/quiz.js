@@ -108,6 +108,14 @@ function getResult(element) {
         // console.log(" wrong answer");
         // set the color red for wrong answer
         element.classList.appendChild("wrong");
+
+        // if the answer is incorrenct, show the right one by adding the green color to it
+        const optionLen = optionContainer.children.length;
+        for (let i = 0; i < optionLen; i++) {
+            if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
+
+            }
+        }
     }
     unclickableOptions();
 }
