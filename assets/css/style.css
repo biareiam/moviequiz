@@ -366,7 +366,9 @@ body {
 */
 
 @media (min-width: 1281px) {
-
+    body {
+        background-color: #b60c2b;
+    }
 
     .custom-box {
         margin-top: 150px;
