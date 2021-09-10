@@ -34,6 +34,8 @@ function getNewQuestion() {
     questionText.innerHTML = currentQuestion.questionCounter;
     //console.log(questionIdex);
 
+    questionCounter++;
+
 
 }
 
@@ -57,7 +59,13 @@ function answerIndicator() {}
  * on the next button. If the length of the quiz is the same as the current question,
  * the quiz show be over, otherwise, the fuction shows gets the next question.
  */
-function next() {}
+function next() {
+    if (questionCounter === quiz.length) {
+        //console.log("quiz over");
+    } else {
+        getNewQuestion();
+    }
+}
 
 
 /**
