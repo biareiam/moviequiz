@@ -55,6 +55,8 @@ function getNewQuestion() {
         availableOptions.push(i);
     }
 
+    optionContainer.innerHTML = '';
+
     // creatr an animation
     let animationDelay = 0.15;
 
@@ -107,7 +109,19 @@ function getResult(element) {
         // set the color red for wrong answer
         element.classList.appendChild("wrong");
     }
+    unclickableOptions();
+}
 
+/**
+ * This fuction will prevent users to change their answer once they already picked one
+ * 
+ */
+
+function unclickableOptions() {
+    const optionLen = optionContainer.children.length;
+    for (let i = 0; i < optionLen; i++) {
+        optionContainer.children[i].classList.add("already-answered");
+    }
 }
 
 /**
