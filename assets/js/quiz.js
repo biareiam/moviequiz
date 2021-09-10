@@ -58,6 +58,17 @@ function getNewQuestion() {
     // create options in inner HTML
 
     for (let i = 0; i < optionLen; i++) {
+        // set the options to be display randomly
+        const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+        // get the position of the alternatives by index from the available options
+        const index2 = availableOptions.indexOf(optonIndex);
+
+        // make sure that the alternatives are not repeated
+        availableOptions.splice(index2, 1);
+
+
+
+
         const option = document.createElement("div");
         option.innerHTML = currentQuestion.options[i];
         option.id = i;
