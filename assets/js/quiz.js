@@ -55,8 +55,11 @@ function getNewQuestion() {
         availableOptions.push(i);
     }
 
-    // create options in inner HTML
+    // creatr an animation
+    let animationDelay = 0.1;
 
+
+    // create options in inner HTML
     for (let i = 0; i < optionLen; i++) {
         // set the options to be display randomly
         const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
@@ -65,13 +68,17 @@ function getNewQuestion() {
 
         // make sure that the alternatives are not repeated
         availableOptions.splice(index2, 1);
+        // console.log(optonIndex);
+        // console.log(availableOptions);
 
 
 
 
         const option = document.createElement("div");
-        option.innerHTML = currentQuestion.options[i];
+        option.innerHTML = currentQuestion.options[optonIndex];
         option.id = i;
+        option.style.animationDelay = animationDelay + "s";
+        animetionDelay = animetionDelay + 0.1;
         option.className = "option";
         optionContainer.appendChild(option);
 
