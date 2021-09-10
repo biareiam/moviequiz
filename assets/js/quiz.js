@@ -230,6 +230,7 @@ function goToHome() {
     resultBox.classList.add("hide");
     // show the home box
     homeBox.classList.remove("hide");
+    resetQuiz();
 }
 
 
@@ -285,5 +286,5 @@ function startQuiz() {
  * This function will say what will happen as soon as the page is loaded
  */
 window.onload = function () {
-    setAvailableQuestions();
+    homeBox.querySelector(".total-question"), innerHTML = quiz.length;
 }
