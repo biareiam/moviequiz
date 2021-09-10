@@ -60,7 +60,34 @@ function leaveQuiz() {}
 
 function quizOver() {}
 
+/**
+ * This function will calculate the result of the quiz.
+ */
+function quizResult() {}
 
+/**
+ * Once the quiz is finished and the user was able to see the results, if desired
+ * they can leave the quiz for good.This function will execute once they click on the
+ * go home button
+ */
+function tryAgainQuiz() {}
+
+
+/**
+ * After seeing the results, if the user decides to try the quiz again.
+ * They just need to press the "try again" button and these fuctions will be
+ * executed, reseting the quiz.
+ */
+function tryAgainQuiz() {}
+
+
+function resetQuiz() {}
+
+/**
+ * When the screen is loaded this function will execute to start the quiz
+ */
+
+function startQuiz() {}
 
 
 
