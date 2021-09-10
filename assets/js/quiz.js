@@ -225,12 +225,13 @@ function quizResult() {
  * they can leave the quiz for good.This function will execute once they click on the
  * go home button
  */
-function tryAgainQuiz() {
-    // hide the results box
+function goToHome() {
+    // hide result box
     resultBox.classList.add("hide");
-    // show the quiz box
-    quizBox.classList.remove("hide");
+    // show the home box
+    homeBox.classList.remove("hide");
 }
+
 
 
 /**
@@ -238,10 +239,23 @@ function tryAgainQuiz() {
  * They just need to press the "try again" button and these fuctions will be
  * executed, reseting the quiz.
  */
-function tryAgainQuiz() {}
+function tryAgainQuiz() {
+    // hide the results box
+    resultBox.classList.add("hide");
+    // show the quiz box
+    quizBox.classList.remove("hide");
 
+    resetQuiz();
+    startQuiz();
 
-function resetQuiz() {}
+}
+
+function resetQuiz() {
+    questionCounter = 0;
+    currentQuestion;
+    attempt = 0;
+    secondsLeft = 120;
+}
 
 /**
  * When the screen is loaded this function will execute to start the quiz
@@ -249,6 +263,10 @@ function resetQuiz() {}
 
 function startQuiz() {
 
+    // hide home box
+    homeBox.classList.add("hide");
+    // show quiz box
+    quizBox.classList.remove("hide");
     // first the questions will be selected
     setAvailableQuestions();
     // A new question will be selected randomly
