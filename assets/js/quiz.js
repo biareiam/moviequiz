@@ -56,7 +56,7 @@ function getNewQuestion() {
     }
 
     // creatr an animation
-    let animationDelay = 0.1;
+    let animationDelay = 0.15;
 
 
     // create options in inner HTML
@@ -78,27 +78,37 @@ function getNewQuestion() {
         option.innerHTML = currentQuestion.options[optonIndex];
         option.id = i;
         option.style.animationDelay = animationDelay + "s";
-        animetionDelay = animetionDelay + 0.1;
+        animetionDelay = animetionDelay + 0.15;
         option.className = "option";
         optionContainer.appendChild(option);
-
-
+        option.setAttribute("onclick", "getResult(this)");
     }
-
-
-
-
-
-
     questionCounter++;
 }
 
 
 /**
- * This function gets the results of the quiz
+ * This function gets the results of the attempt question
  */
 
-function getResult() {}
+function getResult(element) {
+    const id = parseInt(element.id);
+
+    //getting the answer by comparing the id of the choosen one by the user
+    // and the right answer
+
+    if (id === currentQuestion.answer) {
+        //console.log("answer is corrent");
+
+        // set the color green for right answer
+        element.classList.appendChild("correct");
+    } else {
+        // console.log(" wrong answer");
+        // set the color red for wrong answer
+        element.classList.appendChild("wrong");
+    }
+
+}
 
 /**
  * This fuction is to identify if the answer given by the user is the 
