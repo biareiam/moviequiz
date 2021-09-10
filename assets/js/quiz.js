@@ -225,7 +225,12 @@ function quizResult() {
  * they can leave the quiz for good.This function will execute once they click on the
  * go home button
  */
-function tryAgainQuiz() {}
+function tryAgainQuiz() {
+    // hide the results box
+    resultBox.classList.add("hide");
+    // show the quiz box
+    quizBox.classList.remove("hide");
+}
 
 
 /**
