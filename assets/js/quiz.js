@@ -23,7 +23,19 @@ function setAvailableQuestions() {
  * This function will get a new question
  */
 
-function getNewQuestion() {}
+function getNewQuestion() {
+
+    // set question number
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + "of" + quiz.length;
+
+    // set question itself randomly
+    const questionIdex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    currentQuestion = questionIdex;
+    questionText.innerHTML = currentQuestion.questionCounter;
+    //console.log(questionIdex);
+
+
+}
 
 
 /**
@@ -87,7 +99,13 @@ function resetQuiz() {}
  * When the screen is loaded this function will execute to start the quiz
  */
 
-function startQuiz() {}
+function startQuiz() {
+
+    // first the questions will be selected
+    setAvailableQuestions();
+    // A new question will be selected randomly
+    getNewQuestion();
+}
 
 
 
