@@ -95,3 +95,49 @@ Font Awesome was used on all pages to add the instructions, home, settings and c
 ### JavaScript
 * [W3C CSS Validator](https://jshint.com/)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Credits
+
+### Code
+
+* [FontAwesome](https://fontawesome.com/): Library of icons used for social media and download links.
+* CSS Tricks: The base code for the progress bar during the quiz.
+* Youtube and Google: Many different videos and articles helped me to complete this project:
+    - Videos:
+        - [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2439s)
+        - [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
+        - [QUIZ with JavaScript | The Ultimate Guide](https://www.youtube.com/watch?v=MxrGPP4F8Sc&t=3352s)
+        - [Create Quiz Web App using HTML CSS and JavaScript | Quiz App JavaScript](https://www.youtube.com/watch?v=WHHYz8rZmDU)
+
+    - Websites:
+        - [How to Make a Simple JavaScript Quiz](https://www.sitepoint.com/simple-javascript-quiz/)
+        - [Create a Quiz App with Timer using HTML CSS & JavaScript](https://dev.to/codingnepal/create-a-quiz-app-with-timer-using-html-css-javascript-55lf)
+        - [Building a Simple Quiz with HTML, CSS and JavaScript](https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp)
+        - [Building a Quiz App in JavaScript](https://levelup.gitconnected.com/building-a-quiz-app-in-javascript-b3f7d596855b)
+        - [How to make a simple JavaScript quiz](https://simplestepscode.com/javascript-quiz-tutorial/)
+
+### Content
+ 
+ * The background images as mentioned is from [Pexels.](https://www.pexels.com) 
+ * The questions were gather from many different sources:
+
+        * [Can you get over 35/40 in this ultimate '90s movie quiz?] (https://www.joe.ie/movies-tv/can-you-get-over-3540-in-this-ultimate-90s-movie-quiz-542826)
+
+        * [100 Fun Movie Trivia Questions (With Answers) to Stump All Your Film-Loving Friends](https://parade.com/977752/samuelmurrian/movie-trivia/)
+
+        * [Movie Lovers Unite: Take These 23 Quizzes If You Absolutely Love Film](https://www.buzzfeed.com/jamiespain/quizzes-to-take-if-you-just-love-movies)
+
+        * [30 movie quiz questions to test your general knowledge](https://www.cambridge-news.co.uk/news/uk-world-news/movie-quiz-questions-test-answers-18135180)
