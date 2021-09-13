@@ -106,20 +106,20 @@ Font Awesome was used on all pages to add the instructions, home, settings and c
     - Once the site is loaded, a "Start" button in presented to the user.
 
 3. As a User, I want to be able to restart the quiz at any give moment.
-- While playing, a "quit" button is available to the user, located on the left side of the "Next" bottom". It will direct the user to the home page, where thhey can leave the site or start the quiz again.
+    - While playing, a "quit" button is available to the user, located on the left side of the "Next" bottom". It will direct the user to the home page, where thhey can leave the site or start the quiz again.
 
 4. As I user, I want to beable to replay the game. 
-- The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
+    - The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
 
 5. As a User, I want to have access to the time I have left to complete the game.
-- Throughout the whole quiz, the user have access to the timer, located on the right upper corner of the quiz box. If the time is out, an alert is generate to let the user knows that they are out of time. the user is then redirected to the home page, where they can play again or leave the quiz. 
+    - Throughout the whole quiz, the user have access to the timer, located on the right upper corner of the quiz box. If the time is out, an alert is generate to let the user knows that they are out of time. the user is then redirected to the home page, where they can play again or leave the quiz. 
 
 6. As a User, I want to know the correct answer of a question, if they got it wrong.
- - Straight after chosen an option, the user will know if it was correct or not. the correct answer is marked in green and the wrong one in red.  
+    - Straight after chosen an option, the user will know if it was correct or not. the correct answer is marked in green and the wrong one in red.  
 
 6. As a User, I want to have access to my score.
 
-- The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. In the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts. 
+    - The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. In the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts. 
 
 
 
