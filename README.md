@@ -42,6 +42,7 @@ The initial requirements for this project was to create a fun and interactive qu
 - I want to be able to see the correct answer if I make a choose a wrong alternative.
 
 ## Design
+
 ### Color Scheme
  -  the colors used on the trivia were chosen based on the background image used.
 
@@ -82,4 +83,15 @@ It was used to help me find what code correlated to what feature.
 
 *  [FontAwesome](https://fontawesome.com/)
 Font Awesome was used on all pages to add the instructions, home, settings and copyright icons.
+
+## Testing
+
+### HTML  
+* [W3C Markup Validator](https://validator.w3.org/)
+
+### CSS
+* [W3C CSS Validator](https://validator.w3.org/)
+
+### JavaScript
+* [W3C CSS Validator](https://jshint.com/)
 
