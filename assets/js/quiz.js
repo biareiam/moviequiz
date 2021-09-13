@@ -5,9 +5,8 @@ const answerIndicatorContainer = document.querySelector(".answer-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
-const nextButton = document.querySelector(".next-btn");
-const leaveButton = document.querySelectorAll(".leave-btn");
-const leave = document.querySelectorAll(".home-box-leave");
+
+
 
 const questionLimit = 15; // limiting the number of questions b=being displayed at the time.
 
@@ -191,7 +190,7 @@ function next() {
         }, 500);
         //timer stops 
         setTimeout(function () {
-            clearInterval(timerInterval)
+            clearInterval(timerInterval);
         }, 500);
         //if not all questions are answered, go to next question
     } else {
@@ -287,13 +286,13 @@ function goToHome() {
  */
 function tryAgainQuiz() {
     // hide the resultBox
-    resultBox.classList.add("hide")
+    resultBox.classList.add("hide");
     // show quiz box
     quizBox.classList.remove("hide");
     // reset the quiz
     resetQuiz();
     secondsLeft = 120;
-    startQuiz()
+    startQuiz();
 
 }
 
@@ -329,4 +328,4 @@ function startQuiz() {
  */
 window.onload = function () {
     homeBox.querySelector(".total-question"), innerHTML = quiz.length;
-}
+};
