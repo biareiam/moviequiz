@@ -5,9 +5,6 @@ const answerIndicatorContainer = document.querySelector(".answer-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
-
-
-
 const questionLimit = 15; // limiting the number of questions b=being displayed at the time.
 
 var timer = document.querySelector("#timer");
