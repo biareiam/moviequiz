@@ -200,7 +200,7 @@ function next() {
  */
 
 //Timer function
-var secondsLeft = 120;
+var secondsLeft = 5;
 var timerInterval;
 
 function startTimer() {
@@ -211,7 +211,6 @@ function startTimer() {
         //if run out of time, go straight to user initial page to record score
         if (secondsLeft === 0) {
             clearInterval(timerInterval);
-
             quizBox.classList.add("hide");
             homeBox.classList.remove("hide");
             alert("Sorry, You are out of time!");
@@ -233,7 +232,7 @@ function leaveQuiz() {
     quizBox.classList.add("hide");
     resetQuiz();
     startTimer();
-    secondsLeft = 120;
+    secondsLeft = 5;
 }
 
 /**
@@ -288,7 +287,7 @@ function tryAgainQuiz() {
     quizBox.classList.remove("hide");
     // reset the quiz
     resetQuiz();
-    secondsLeft = 120;
+    secondsLeft = 5;
     startQuiz();
 
 }
@@ -297,7 +296,7 @@ function resetQuiz() {
     questionCounter = 0;
     currentQuestion;
     attempt = 0;
-    secondsLeft = 120;
+    secondsLeft = 5;
 }
 
 /**
