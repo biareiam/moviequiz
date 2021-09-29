@@ -280,7 +280,7 @@ body {
 
 .quiz-box .answer-indicator div.correct {
     background-color: rgba(0, 128, 0, 0.459);
-    background-image: url('../pic/correct.png');
+    background-image: url('../images/correct.png');
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -289,7 +289,7 @@ body {
 
 .quiz-box .answer-indicator div.wrong {
     background-color: rgba(128, 0, 0, 0.651);
-    background-image: url('../pic/wrong.png');
+    background-image: url('../images/wrong.png');
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
