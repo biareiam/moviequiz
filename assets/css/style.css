@@ -20,8 +20,8 @@ body {
 
 /*---------------------- Home box*/
 .custom-box {
-    max-width: 750px;
-    height: 485px;
+    max-width: 1000px;
+    height: 500px;
     background-color: #2e2b2c85;
     margin: 40px auto;
     padding: 30px;
@@ -402,17 +402,6 @@ body {
 
     .custom-box {
         margin-top: 50px;
-    }
-
-
-    #questions {
-
-        margin-left: 140px;
-    }
-
-    #results {
-        margin-left: 140px;
-
     }
 
 }
