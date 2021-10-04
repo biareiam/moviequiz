@@ -46,7 +46,7 @@ The initial requirements for this project was to create a fun and interactive qu
 ### Color Scheme
  -  the colors used on the trivia were chosen based on the background image used.
 
- ![color scheme](https://user-images.githubusercontent.com/65717229/133080374-4f7a097f-7f2b-408e-88c9-31e7fa778b36.PNG)
+ ![color scheme](https://user-images.githubusercontent.com/65717229/135891976-10c0bb45-1018-402b-ae44-cf0eb0e4f4af.PNG)
 
 
 
@@ -93,7 +93,7 @@ Font Awesome was used on all pages to add the instructions, home, settings and c
 * [W3C CSS Validator](https://validator.w3.org/)
 
 ### JavaScript
-* [W3C CSS Validator](https://jshint.com/)
+* [Jshint](https://jshint.com/)
 
 
 ### Testing User Stories from User Experience (UX)
