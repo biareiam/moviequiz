@@ -200,7 +200,7 @@ function next() {
  */
 
 //Timer function
-var secondsLeft = 15;
+var secondsLeft = 120;
 var timerInterval;
 
 function startTimer() {
@@ -232,7 +232,7 @@ function leaveQuiz() {
     quizBox.classList.add("hide");
     resetQuiz();
     startTimer();
-    secondsLeft = 15;
+    secondsLeft = 120;
 }
 
 /**
@@ -287,7 +287,7 @@ function tryAgainQuiz() {
     quizBox.classList.remove("hide");
     // reset the quiz
     resetQuiz();
-    secondsLeft = 15;
+    secondsLeft = 120;
     startQuiz();
 
 }
@@ -296,7 +296,7 @@ function resetQuiz() {
     questionCounter = 0;
     currentQuestion;
     attempt = 0;
-    secondsLeft = 15;
+    secondsLeft = 120;
 }
 
 /**
