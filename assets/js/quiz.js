@@ -200,7 +200,7 @@ function next() {
  */
 
 //Timer function
-var secondsLeft = 120;
+var secondsLeft = 15;
 var timerInterval;
 
 function startTimer() {
@@ -232,7 +232,7 @@ function leaveQuiz() {
     quizBox.classList.add("hide");
     resetQuiz();
     startTimer();
-    secondsLeft = 120;
+    secondsLeft = 15;
 }
 
 /**
@@ -287,7 +287,7 @@ function tryAgainQuiz() {
     quizBox.classList.remove("hide");
     // reset the quiz
     resetQuiz();
-    secondsLeft = 120;
+    secondsLeft = 15;
     startQuiz();
 
 }
@@ -296,7 +296,7 @@ function resetQuiz() {
     questionCounter = 0;
     currentQuestion;
     attempt = 0;
-    secondsLeft = 120;
+    secondsLeft = 15;
 }
 
 /**
@@ -323,5 +323,5 @@ function startQuiz() {
  * This function will say what will happen as soon as the page is loaded
  */
 window.onload = function () {
-    homeBox.querySelector(".total-question"), innerHTML = quiz.length;
+    homeBox.querySelector(".total-question").innerHTML = questionLimit;
 };
