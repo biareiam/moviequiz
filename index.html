@@ -13,7 +13,7 @@
 
 <body>
     <main class="hero-image">
-        <div class="home-box custom-box">
+        <section class="home-box custom-box">
             <h1>Welcome to the Movie Trivia</h1>
             <h2> Are you ready to put your knowlege into test?</h2>
             <h3>The instructions are simple:</h3>
@@ -26,8 +26,8 @@
                 <button type="button" class="btn" id="start" onclick="startQuiz()">Let's start <i
                         class="far fa-play-circle"></i></button>
             </div>
-        </div>
-        <div class="quiz-box custom-box hide" id="questions">
+        </section>
+        <section class="quiz-box custom-box hide" id="questions">
             <div class="clock-timer">
                 <div>
                     <span id="timer"></span>
@@ -44,8 +44,8 @@
                         class="fas fa-arrow-right"></i></button>
             </div>
             <div class="answer-indicator"></div>
-        </div>
-        <div class="result-box custom-box hide" id="results">
+        </section>
+        <section class="result-box custom-box hide" id="results">
             <h1>Your Score <i class="fas fa-crown" id="crown"></i></h1>
             <table>
                 <tr>
@@ -77,7 +77,7 @@
                     id="undo"></i></button>
             <button type="button" class="btn quit" onclick="goToHome()">Go to Home <i class="fas fa-home"
                     id="home"></i></button>
-        </div>
+        </section>
     </main>
     <!--Fontawsome-->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
