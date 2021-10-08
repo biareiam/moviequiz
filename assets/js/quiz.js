@@ -1,3 +1,4 @@
+// First, save the ids into variables
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
@@ -5,10 +6,16 @@ const answerIndicatorContainer = document.querySelector(".answer-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
-const questionLimit = 15; // limiting the number of questions b=being displayed at the time.
 
-var timer = document.querySelector("#timer");
+const nextButton = document.querySelector(".next-btn");
+const leaveButton = document.querySelectorAll(".leave-btn");
 
+const questionLimit = 15;
+
+
+/* create a variable for the current question and a variable 
+for the available question, leave it an emptt string to be 
+fill in with the different questions.*/
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
@@ -16,10 +23,9 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-/**
- * This fuction will put the questions into an array and iterate through it.
- *
- */
+
+/* push the questions into availableQuestions Array*/
+/* the "quiz" is on the questions.js*/
 function setAvailableQuestions() {
     const totalQuestion = quiz.length;
     for (let i = 0; i < totalQuestion; i++) {
@@ -27,59 +33,48 @@ function setAvailableQuestions() {
     }
 }
 
-/**
- * This function will get a new question
- */
 
+/*Fuction to get a new question*/
+// set question number, question and options
 function getNewQuestion() {
-
-    // set question number
+    //set question number -  change the text that is why innerHTML
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + questionLimit;
 
-    // set question itself randomly
+    // set question text
+    // get random question
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    // this variable was already created in the beginning
     currentQuestion = questionIndex;
-    questionText.innerHTML = currentQuestion.question;
-    //console.log(questionIdex);
+    questionText.innerHTML = currentQuestion.question; // this q was defined in the other javascript file.
 
-    // get the position of the questionIndec from the availableQuestion array
+    // get the position of the questionIndex from the availableQuestions array
     const index1 = availableQuestions.indexOf(questionIndex);
-    // cosole.log(index1);
-    // console.log(questionIndex);
+    // remove the questionIndex from the availableQuestions 
+    //array so the question will not be repeated
+    availableQuestions.splice(index1, 1); //The splice() method adds and/or removes array elements. splice() overwrites the original array.
 
-    // if a question was already picked, it should not come up again
-    availableQuestions.splice(index1, 1);
-    // console.log(availableQuestions);
-
-    // set alternatives
-    // first get their length. They will be also displayed randomly each time.
-    // console.log(currentQuestin.options);
+    // set options
+    // get the length of options 9 this variable is on the questions file.
 
     const optionLen = currentQuestion.options.length;
-    // like with the questions, the options will be pushed into and 
-    // empty array and interate though.
+    // push options into  availableOptions Array
     for (let i = 0; i < optionLen; i++) {
         availableOptions.push(i);
     }
 
     optionContainer.innerHTML = '';
-
-    // creatr an animation
+    // animation of the options
     let animationDelay = 0.15;
 
-
-    // create options in inner HTML
+    // create options in html
     for (let i = 0; i < optionLen; i++) {
-        // set the options to be display randomly
+
+        // random option
         const optonIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-        // get the position of the alternatives by index from the available options
+        // get this position of optionIndex from the availableoptions
         const index2 = availableOptions.indexOf(optonIndex);
-        // make sure that the alternatives are not repeated
+        //remove the optionIndex from the availableOptions, so it does not repeat
         availableOptions.splice(index2, 1);
-        // console.log(optonIndex);
-        // console.log(availableOptions);
-
-
 
 
         const option = document.createElement("div");
@@ -90,41 +85,36 @@ function getNewQuestion() {
         option.className = "option";
         optionContainer.appendChild(option);
         option.setAttribute("onclick", "getResult(this)");
+
     }
+
     questionCounter++;
+
 }
 
 
-/**
- * This function gets the results of the attempt question
- */
+// creating getResult function, which will get the result of the curent attempt
 
 function getResult(element) {
     const id = parseInt(element.id);
 
-    //getting the answer by comparing the id of the choosen one by the user
-    // and the right answer
-
+    //geting the answer by comparing the id of clicked option  
     if (id === currentQuestion.answer) {
-        //console.log("answer is corrent");
-
-        // set the color green for right answer
+        // set the green color to the correct option
         element.classList.add("correct");
-        // add the indicator tp correct mark
+        // add the indicator to correct mark
         updateAnswerIndicator("correct");
 
         correctAnswers++;
-        //console.log(correctAnswers);
         unclickableOptions();
     } else {
-        // console.log(" wrong answer");
-        // set the color red for wrong answer
-
+        // set the red color to the incorrect option
         element.classList.add("wrong");
-        // add the indicator tp incorrect mark
+        // add the indicator to incorrect mark
         updateAnswerIndicator("wrong");
         unclickableOptions();
-        // if the answer is incorrenct, show the right one by adding the green color to it
+
+        // if the answer is incorrect then show the correct option by adding green colour to it
         const optionLen = optionContainer.children.length;
         for (let i = 0; i < optionLen; i++) {
             if (parseInt(optionContainer.children[i].id) === currentQuestion.answer) {
@@ -136,11 +126,8 @@ function getResult(element) {
     }
 }
 
-/**
- * This fuction will prevent users to change their answer once they already picked one
- * 
- */
 
+// /////make all the options unclickable once the user selcts a option(restrict the user to change the option again)
 function unclickableOptions() {
     const optionLen = optionContainer.children.length;
     for (let i = 0; i < optionLen; i++) {
@@ -148,10 +135,8 @@ function unclickableOptions() {
     }
 }
 
-/**
- * This fuction is to identify if the answer given by the user is the 
- * right one or not. So if eather, the user was correct or wrong
- */
+
+
 
 function answerIndicator() {
     answerIndicatorContainer.innerHTML = '';
@@ -162,82 +147,36 @@ function answerIndicator() {
     }
 }
 
-
-/**
- * This fucntion will update the markType
- */
-
 function updateAnswerIndicator(markType) {
     //console.log(markType);
     answerIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
 
-/**
- * This fuction will indicate what will happen when the user clicks
- * on the next button. If the length of the quiz is the same as the current question,
- * the quiz show be over, otherwise, the fuction shows gets the next question.
- */
+
+// create a fuction to the button next
 function next() {
+    // if  it is the last question, end the quiz, if not go to the next question
     if (questionCounter === questionLimit) {
-        setTimeout(function () {
-            quizBox.classList.add("hide");
-            resultBox.classList.remove("hide");
-            quizResult();
-        }, 500);
-        //timer stops 
-        setTimeout(function () {
-            clearInterval(timerInterval);
-        }, 500);
-        //if not all questions are answered, go to next question
+        //console.log("quiz over");
+        quizOver();
     } else {
         getNewQuestion();
     }
+
 }
 
-/**
- * The fuction will set a timer to the quiz
- */
-
-//Timer function
-var secondsLeft = 120;
-var timerInterval;
-
-function startTimer() {
-    timerInterval = setInterval(function () {
-        secondsLeft--;
-        timer.textContent = "Time: " + secondsLeft + " sec";
-
-        //if run out of time, go straight to user initial page to record score
-        if (secondsLeft === 0) {
-            clearInterval(timerInterval);
-            quizBox.classList.add("hide");
-            homeBox.classList.remove("hide");
-            alert("Sorry, You are out of time!");
-            resetQuiz();
-        }
-    }, 1000);
-
-    return timerInterval;
-}
-
-/**
- * This fuction will execute if the user decide to leave the quiz while
- * in the middle of it. They will be redirected to the home page.
- */
 function leaveQuiz() {
     // show home box
     homeBox.classList.remove("hide");
     //hide quiz quiz-box
     quizBox.classList.add("hide");
-    resetQuiz();
-    startTimer();
-    secondsLeft = 120;
+    questionCounter = 0;
+    currentQuestion;
+    attempt = 0;
+
 }
 
-/**
- * This fuction will execute once the quiz is over.
- */
 
 function quizOver() {
     //hide quiz quiz-box
@@ -246,9 +185,8 @@ function quizOver() {
     resultBox.classList.remove("hide");
     quizResult();
 }
-/**
- * This function will calculate the result of the quiz.
- */
+
+// get the quiz result
 function quizResult() {
     resultBox.querySelector(".total-question").innerHTML = questionLimit;
     resultBox.querySelector(".total-attempt").innerHTML = attempt;
@@ -258,14 +196,29 @@ function quizResult() {
     const percentage = (correctAnswers / questionLimit) * 100;
     resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + "/" + questionLimit;
+
 }
 
-/**
- * Once the quiz is finished and the user was able to see the results, if desired
- * they can leave the quiz for good.This function will execute once they click on the
- * go home button
- */
+// function to reset the quiz
+function resetQuiz() {
+    questionCounter = 0;
+    currentQuestion;
+    attempt = 0;
+}
+
+function tryAgainQuiz() {
+    // hide the resultBox
+    resultBox.classList.add("hide")
+    // show quiz box
+    quizBox.classList.remove("hide");
+
+    // reset the quiz
+    resetQuiz();
+    startQuiz()
+}
+
 function goToHome() {
+
     // hide results box
     resultBox.classList.add("hide");
     //show home box 
@@ -274,54 +227,27 @@ function goToHome() {
 }
 
 
-
-/**
- * After seeing the results, if the user decides to try the quiz again.
- * They just need to press the "try again" button and these fuctions will be
- * executed, reseting the quiz.
- */
-function tryAgainQuiz() {
-    // hide the resultBox
-    resultBox.classList.add("hide");
-    // show quiz box
-    quizBox.classList.remove("hide");
-    // reset the quiz
-    resetQuiz();
-    secondsLeft = 120;
-    startQuiz();
-
-}
-
-function resetQuiz() {
-    questionCounter = 0;
-    currentQuestion;
-    attempt = 0;
-    secondsLeft = 120;
-}
-
-/**
- * When the screen is loaded this function will execute to start the quiz
- */
-
+/* starting point
+ 
+/* when the screen load, it will show an available question and get anew question*/
 function startQuiz() {
-
     // hide home box
     homeBox.classList.add("hide");
     // show quiz box
     quizBox.classList.remove("hide");
-    // first the questions will be selected
+
+    // First we will set all questions in avalaibleQuestions Array
     setAvailableQuestions();
-    // start timer
-    startTimer();
-    // A new question will be selected randomly
+
+    //second we will call the getNewQuestion function
     getNewQuestion();
-    // to create an indicator of answer
+
+    // to create indicator of answers
     answerIndicator();
 
 }
-/**
- * This function will say what will happen as soon as the page is loaded
- */
+
+
 window.onload = function () {
     homeBox.querySelector(".total-question").innerHTML = questionLimit;
-};
+}
