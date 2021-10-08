@@ -148,7 +148,7 @@ function answerIndicator() {
 }
 
 function updateAnswerIndicator(markType) {
-    //console.log(markType);
+
     answerIndicatorContainer.children[questionCounter - 1].classList.add(markType);
 }
 
@@ -158,7 +158,7 @@ function updateAnswerIndicator(markType) {
 function next() {
     // if  it is the last question, end the quiz, if not go to the next question
     if (questionCounter === questionLimit) {
-        //console.log("quiz over");
+
         quizOver();
     } else {
         getNewQuestion();
@@ -204,6 +204,8 @@ function resetQuiz() {
     questionCounter = 0;
     currentQuestion;
     attempt = 0;
+    correctAnswers = 0;
+
 }
 
 function tryAgainQuiz() {
@@ -211,7 +213,6 @@ function tryAgainQuiz() {
     resultBox.classList.add("hide")
     // show quiz box
     quizBox.classList.remove("hide");
-
     // reset the quiz
     resetQuiz();
     startQuiz()

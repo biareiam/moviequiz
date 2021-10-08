@@ -14,9 +14,8 @@ The initial requirements for this project was to create a fun and interactive qu
 - The user is not allowed to change options once pick one.
 - Once clicked on the option, the user will know straight away if it was the correct choice and if not, which is the right option.
 - A result's table which contains the number of correct and wrong answers, number of attempts, and the percentage of correct answers.
-- A timer that ends the quiz if the time runs out.
 - If the user desires to quit the quiz, they just need to click on the 'Quit' button and they will be directed to the home page.
-- After concluding the quiz, users can try to answer it again and quit for good.
+- After concluding the quiz, users can play it again or go to the home page.
  
 
 ## User Stories
@@ -27,7 +26,6 @@ The initial requirements for this project was to create a fun and interactive qu
 - It needs to be instantly engaging to encourage the user to play the game.
 - Questions need to be randomised and drawn from a large bank of available questions.
 - Questions can not be repeated with frequency.
-- The timer must be visible at all times, so the user knows how much longer until time out.
 - If desired, the user can leave the quiz at any moment.
 
 
@@ -36,7 +34,7 @@ The initial requirements for this project was to create a fun and interactive qu
 - I want to know how many questions I have to answer.
 - I want to be able to easily navigate throughout the site.
 - I want to be able to play again if I want.
-- I want to know the right answers to the questions,if I choose the wrong alternative.
+- I want to know the correct answers to the questions,if the wrong alternatibe was chosen.
 - I want to know how many correct answers I get and how many wrong ones.
 
 
@@ -106,17 +104,33 @@ The wireframe of the site was created initially using Balsamiq and it can be see
 
 1. As a User, I want to easily understand how the quiz works.
     - Once the site is loaded, the user is presented with the instructions of how the quiz works.
+![rules](https://user-images.githubusercontent.com/65717229/136567637-7b197c48-1f53-42e6-8503-88221af1b305.PNG)
+
 2. As a User, I want to easily understand how to start the trivia.
     - Once the site is loaded, a "Start" button is presented to the user.
+![start](https://user-images.githubusercontent.com/65717229/136567780-11777301-9f51-42a1-97ee-0bd5248e7917.PNG)
+
 3. As a User, I want to be able to restart the quiz at any given moment.
     - While playing, a "quit" button is available to the user, located on the left side of the "Next bottom". It will direct the user to the home page, where they can leave the site or start the quiz again.
+![restart or quit](https://user-images.githubusercontent.com/65717229/136568025-b214c81d-7987-4e50-8411-3fa6e62a5488.PNG)
+
 4. As a user, I want to be able to replay the game.
     - The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
-5. As a User, I want to have access to the time I have left to complete the game.
-    - Throughout the whole quiz, the user has access to the timer, located on the right upper corner of the quiz box. If the time is out, an alert is generated to let the user know that they are out of time. the user is then redirected to the home page, where they can play again or leave the quiz.
+![replay](https://user-images.githubusercontent.com/65717229/136568104-06278e69-e28e-4a47-84a8-9f982b371b25.PNG)
+5. As a User, I want to see how many more questions I have to answer.
+    - On the left upper corner, the user can see how many questions were already answered and how many more until the end of the quiz.
+![questions](https://user-images.githubusercontent.com/65717229/136568454-f1ab9156-df1c-4ea0-bce0-cbc950f4ffe8.PNG)
+
 6. As a User, I want to know the correct answer of a question, if they got it wrong.
     - Straight after choosing an option, the user will know if it was correct or not. The correct answer is marked in green and the wrong one in red.
-7. As a User, I want to have access to my score.
+![answer-correct](https://user-images.githubusercontent.com/65717229/136568559-66457d67-7941-4483-a37a-4b788c72df5a.PNG)
+
+![answer-wrong](https://user-images.githubusercontent.com/65717229/136568598-1fd2297e-3ff3-4f3b-8e2e-10bb062623a9.PNG)
+
+7. As a User, I want to have a notion of how I am doing so far.
+    - On the bottom of the quiz page, users can track their process in the game up to that point. 
+
+8. As a User, I want to have access to my score.
     - The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. At the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts.
 
 
