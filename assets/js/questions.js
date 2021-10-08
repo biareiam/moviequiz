@@ -31,7 +31,7 @@ const quiz = [{
         answer: 0
     },
     {
-        question: ' Freddy Krueger wears a striped sweater that is which colors?',
+        question: 'Freddy Krueger wears a striped sweater that is which colors?',
         options: ['Orange and green', 'Red and green', 'Orange and brown'],
         answer: 1
     },
@@ -54,7 +54,7 @@ const quiz = [{
     },
 
     {
-        question: 'What is the Christmas film which had total worldwide gross of $511.8 million, against a production budget of $75 million?',
+        question: 'What is the Christmas film which had total worldwide gross of $511.8 million ?',
         options: ['Home Alone', 'Elf', 'The Grinch'],
         answer: 2
     },
@@ -89,8 +89,8 @@ const quiz = [{
         answer: 0
     },
     {
-        question: 'Which is NOT the name of a child selected to tour the Wonka factory in Willy Wonka and the Chocolate Factory?',
-        options: ['Charlie Bucket', 'Billy Warp', 'Mike Teavee'],
+        question: 'For what movie did Steven Spielberg win his first Oscar for Best Director?',
+        options: ['ET', 'Schindler’s List', 'Jaws'],
         answer: 1
     },
     {
@@ -189,14 +189,14 @@ const quiz = [{
         answer: 2
     },
     {
-        question: 'Eurovision Song Contest: The Story of Fire Saga starred Will Ferrelll and Rachel McAdams as the main characters Lars and Sigrit - but which country were the pair supposed to be from?',
-        options: ['Iceland', 'Finland', 'Sweden'],
-        answer: 0
+        question: 'What was the first feature-length animated movie ever released?',
+        options: ['Sleeping Beauty', 'Snow White and the Seven Dwarfs', 'Little mermaid'],
+        answer: 1
     },
     {
-        question: "'Soul' released on Disney+ features Joe, a middle school teacher whose life hasn't gone quite the way he expected - but who stars as Joe?",
-        options: ['Idris Elba', 'Dwayne Johnson', 'Jamie Foxx'],
-        answer: 2
+        question: "What flavor of Pop Tarts does Buddy the Elf use in his spaghetti in Elf? ",
+        options: ['Chocolate', 'Pumpkin', 'Strawberry'],
+        answer: 0
     },
     {
         question: 'In The Matrix, does Neo take the blue pill or the red pill?',
