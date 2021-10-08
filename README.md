@@ -104,34 +104,46 @@ The wireframe of the site was created initially using Balsamiq and it can be see
 
 1. As a User, I want to easily understand how the quiz works.
     - Once the site is loaded, the user is presented with the instructions of how the quiz works.
-![rules](https://user-images.githubusercontent.com/65717229/136567637-7b197c48-1f53-42e6-8503-88221af1b305.PNG)
+
+    ![rules](https://user-images.githubusercontent.com/65717229/136567637-7b197c48-1f53-42e6-8503-88221af1b305.PNG)
 
 2. As a User, I want to easily understand how to start the trivia.
     - Once the site is loaded, a "Start" button is presented to the user.
-![start](https://user-images.githubusercontent.com/65717229/136567780-11777301-9f51-42a1-97ee-0bd5248e7917.PNG)
+
+    ![start](https://user-images.githubusercontent.com/65717229/136567780-11777301-9f51-42a1-97ee-0bd5248e7917.PNG)
 
 3. As a User, I want to be able to restart the quiz at any given moment.
     - While playing, a "quit" button is available to the user, located on the left side of the "Next bottom". It will direct the user to the home page, where they can leave the site or start the quiz again.
-![restart or quit](https://user-images.githubusercontent.com/65717229/136568025-b214c81d-7987-4e50-8411-3fa6e62a5488.PNG)
+
+    ![restart or quit](https://user-images.githubusercontent.com/65717229/136568025-b214c81d-7987-4e50-8411-3fa6e62a5488.PNG)
 
 4. As a user, I want to be able to replay the game.
     - The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
-![replay](https://user-images.githubusercontent.com/65717229/136568104-06278e69-e28e-4a47-84a8-9f982b371b25.PNG)
+
+    ![replay](https://user-images.githubusercontent.com/65717229/136568104-06278e69-e28e-4a47-84a8-9f982b371b25.PNG)
+
 5. As a User, I want to see how many more questions I have to answer.
     - On the left upper corner, the user can see how many questions were already answered and how many more until the end of the quiz.
-![questions](https://user-images.githubusercontent.com/65717229/136568454-f1ab9156-df1c-4ea0-bce0-cbc950f4ffe8.PNG)
+
+    ![questions](https://user-images.githubusercontent.com/65717229/136568454-f1ab9156-df1c-4ea0-bce0-cbc950f4ffe8.PNG)
 
 6. As a User, I want to know the correct answer of a question, if they got it wrong.
     - Straight after choosing an option, the user will know if it was correct or not. The correct answer is marked in green and the wrong one in red.
-![answer-correct](https://user-images.githubusercontent.com/65717229/136568559-66457d67-7941-4483-a37a-4b788c72df5a.PNG)
 
-![answer-wrong](https://user-images.githubusercontent.com/65717229/136568598-1fd2297e-3ff3-4f3b-8e2e-10bb062623a9.PNG)
+    ![answer-correct](https://user-images.githubusercontent.com/65717229/136568559-66457d67-7941-4483-a37a-4b788c72df5a.PNG)
+
+    ![answer-wrong](https://user-images.githubusercontent.com/65717229/136568598-1fd2297e-3ff3-4f3b-8e2e-10bb062623a9.PNG)
 
 7. As a User, I want to have a notion of how I am doing so far.
-    - On the bottom of the quiz page, users can track their process in the game up to that point. 
+    - On the bottom of the quiz page, users can track their progress in the game up to that point.
+
+    ![progress](https://user-images.githubusercontent.com/65717229/136570333-1aa9676b-97c8-4293-b34b-572e1ab41347.PNG)    
 
 8. As a User, I want to have access to my score.
     - The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. At the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts.
+
+    ![score](https://user-images.githubusercontent.com/65717229/136570463-3449d733-b4c5-4cf7-ae40-1703d0c1d7a4.PNG)    
+
 
 
 ## Further Testing
@@ -195,3 +207,7 @@ To deploy my website to GitHub Pages, the following steps were taken:
 
 
 ## Acknowledgements
+
+I appreciate the support, feedback and guidance of the following people throughout this project: my mentor Victor Miclovich the tutors and the community on slack.
+
+This is for educational use.
