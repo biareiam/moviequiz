@@ -63,8 +63,7 @@ The initial requirements for this project was to create a fun and interactive qu
 
 The wireframe of the site was created initially using Balsamiq and it can be seen in the image below,and its mobile, tablet and desktop version.
 
-![quiz-wireframe](https://user-images.githubusercontent.com/65717229/133081895-e7ab3f45-88c2-45f8-a029-01816cf4a665.png)
-
+![quiz-wireframe](https://user-images.githubusercontent.com/65717229/136571608-1a82f711-c175-4f57-bc3f-36506557ff4d.png)
 
 ## Technologies Used
 
