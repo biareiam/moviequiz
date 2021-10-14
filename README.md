@@ -1,10 +1,13 @@
 # Movie Trivia
 
-This is a movie trivia quiz, created with the purpose of entertaining movie lovers while testing their knowledge. It was designed to be responsive on a wide range of devices, while also being easy to navigate though. 
+Welcome to my second milestone project, which was developed in HTML, CSS, and JavaScript.
+
+This is a movie quiz, created with the purpose of entertaining movie lovers while testing their knowledge. It was designed to be responsive on a wide range of devices, while also being easy to navigate though.
+
 
 ## User Experience (UX)
 
-The initial requirements for this project was to create a fun and interactive quiz that could be enjoyed for anyone who loves movies. As previously mentioned the main target are movie lovers,but also anyone who wants to have a bit of fun and learn more about movies. The users will pick one alternative and they will know if it is right or wrong straight away. To make it a bit more challenging, the quiz has a timer of 2 minutes. There are 15 questions, and a single answer.
+The initial requirements for this project was to create a fun and interactive quiz that could be enjoyed for anyone who loves movies. As previously mentioned the main target are movie lovers,but also anyone who wants to have a bit of fun and learn more about movies. The users will pick one alternative and they will know if it is right or wrong straight away.There are 15 questions, and a single answer. A result’s board will appear at the end of the quiz.
 
 
 ## Features:
@@ -20,7 +23,7 @@ The initial requirements for this project was to create a fun and interactive qu
 
 ## User Stories
 
-### Client Goals
+### Website Goals
 - The quiz needs to be easily accessible, with instructions of how it works.
 - It needs to be easy to see how many questions there are, and how many correct answers have been made throughout the quiz.
 - It needs to be instantly engaging to encourage the user to play the game.
@@ -29,7 +32,7 @@ The initial requirements for this project was to create a fun and interactive qu
 - If desired, the user can leave the quiz at any moment.
 
 
-### First Time Visitor Goals
+### First Time Visitor 
 - I want it to be easy to understand what to do.
 - I want to know how many questions I have to answer.
 - I want to be able to easily navigate throughout the site.
@@ -38,7 +41,7 @@ The initial requirements for this project was to create a fun and interactive qu
 - I want to know how many correct answers I get and how many wrong ones.
 
 
-### Returning Visitor Goals
+### Returning Visitor
 - I want to be able to play the quiz with different questions.
 - I want to be able to see the correct answer if I choose the wrong alternative.
 
@@ -74,7 +77,7 @@ The wireframe of the site was created initially using Balsamiq and it can be see
 * [JavaScript](https://www.javascript.com/)
 
 
-### Frameworks Libraries and Programs Used
+### Frameworks Libraries and Programs 
 
 * [Balsamiq](https://balsamiq.com/)
     * As previously mentioned it was used to create the wireframes during the design process.
@@ -106,7 +109,7 @@ The wireframe of the site was created initially using Balsamiq and it can be see
 
     ![rules](https://user-images.githubusercontent.com/65717229/136567637-7b197c48-1f53-42e6-8503-88221af1b305.PNG)
 
-2. As a User, I want to easily understand how to start the trivia.
+2. As a User, I want to easily understand how to start the quiz.
     - Once the site is loaded, a "Start" button is presented to the user.
 
     ![start](https://user-images.githubusercontent.com/65717229/136567780-11777301-9f51-42a1-97ee-0bd5248e7917.PNG)
@@ -142,11 +145,15 @@ The wireframe of the site was created initially using Balsamiq and it can be see
     - The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. At the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts.
 
     ![score](https://user-images.githubusercontent.com/65717229/136570463-3449d733-b4c5-4cf7-ae40-1703d0c1d7a4.PNG)    
-
-
+    
 
 ## Further Testing
 * The project was tested on the following browsers: Google Chrome, Internet Explorer, Microsoft Edge, and Safari. It was designed to be responsive to many different devices: mobile, tablet and desktop.
+
+## Bugs/errors
+
+- I had to create a function to prevent users from changing their answer, once one of the alternatives were already selected. 
+- I had a bit of trouble in the beginning with the “Try Again” button, since it was not starting the quiz from the very start. 
 
 
 ## Performance
@@ -162,14 +169,17 @@ To measure the performance Web Dev was used, and the results can be seen in the 
 
 To deploy my website to GitHub Pages, the following steps were taken:
 
-* Logged into GitHub.
-* Selected my repository from the GitHub dashboard.
-* Selected Settings at the top of the chosen repository.
-* Scrolled down to the GitHub Pages section.
-* Under Source click the drop-down menu and select a source to be published, in this case it was Master Branch.
-* Once selected, the page was published immediately, and a link to the deployed website was presented.
-
-* The link to the deployed website can be accessed [here.](https://biareiam.github.io/movietrivia/)
+* To deploy my website to GitHub Pages, the following steps were taken:
+* A local project was created in GitHub with a new repository called 'Movie quiz'
+* The project had regular push and detailed commits which were pushed to the GitHub website before deployment
+* The project was deployed by logging in to GitHub and locating the [GitHub Repository](https://github.com/biareiam/movie)
+* At the top of the Repository (not top of page), locate the "Settings" Button on the menu and click
+* Scroll down the Settings page until the "GitHub Pages" Section was found
+* Under "Source", click the dropdown called "None" and select "Master Branch"
+* The page will refresh and you will be brought back to the top of the settings page
+* Scroll back down through the page to locate the now published site [link](https://biareiam.github.io/movie/) in the "GitHub Pages" section
+* The code can be run locally through clone or download, you can do this by opening the repository, clicking on the code button and then selecting either 'clone' or 'download'
+* The Clone option provides a url, which you can use on your desktop IDE
 
 ## Credits
 
@@ -179,7 +189,7 @@ To deploy my website to GitHub Pages, the following steps were taken:
 * CSS Tricks: The base code for the progress bar during the quiz.
 * Youtube and Google: Many different videos and articles helped me to complete this project:
     * Videos:
-         * [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2439s)
+        * [How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2439s)
         * [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k)
         * [QUIZ with JavaScript | The Ultimate Guide](https://www.youtube.com/watch?v=MxrGPP4F8Sc&t=3352s)
         * [Create Quiz Web App using HTML CSS and JavaScript | Quiz App JavaScript](https://www.youtube.com/watch?v=WHHYz8rZmDU)
