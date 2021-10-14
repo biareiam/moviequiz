@@ -1,8 +1,9 @@
-# Movie Trivia
+# Movie Quiz
 
 Welcome to my second milestone project, which was developed in HTML, CSS, and JavaScript.
 
 This is a movie quiz, created with the purpose of entertaining movie lovers while testing their knowledge. It was designed to be responsive on a wide range of devices, while also being easy to navigate though.
+
 
 
 ## User Experience (UX)
@@ -44,6 +45,13 @@ The initial requirements for this project was to create a fun and interactive qu
 ### Returning Visitor
 - I want to be able to play the quiz with different questions.
 - I want to be able to see the correct answer if I choose the wrong alternative.
+
+### Strategy
+The objective of this project is to create an interactive quiz.
+### Goals
+The goal of this website is to provide a positive user experience while testing their movie knowledge and learning a bit more about it. 
+### Scope
+The website is responsive, allowing people to interact with it on different devices.
 
 
 ## Design
