@@ -287,12 +287,12 @@ body {
 }
 
 #next-button {
-    background-color: rgb(42, 122, 62);
+    background-color: rgb(78, 95, 194);
 }
 
 
 #leave-button {
-    background-color: rgb(207, 68, 68);
+    background-color: rgb(124, 54, 54);
 }
 
 #crown {
@@ -339,11 +339,11 @@ body {
 }
 
 .try-again {
-    background-color: seagreen;
+    background-color: rgb(212, 153, 65);
 }
 
 .quit {
-    background-color: rgb(97, 87, 187);
+    background-color: rgb(87, 147, 187);
 }
 
 .home-box-leave {
