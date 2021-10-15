@@ -6,7 +6,7 @@ body {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    background: url('../images/popcorn1.webp') center no-repeat;
+    background: url('../images/negatives-stripes-with-clapperboard-film-reels-tickets-popcorn-wooden-desk_23-2148188185.jpg') center no-repeat;
     background-size: cover;
     height: 100%;
 }
@@ -16,13 +16,14 @@ body {
     margin: 0;
     padding: 0;
     outline: none;
+
 }
 
 /*---------------------- Home box*/
 .custom-box {
     max-width: 1000px;
     height: 500px;
-    background-color: #2e2b2c85;
+    background-color: #2e2b2ce5;
     margin: 40px auto;
     padding: 30px;
     animation: fadeInRight 1s ease;
@@ -354,12 +355,28 @@ body {
         height: 690px;
     }
 
+    .home-box h1 {
+        font-size: 26px;
+    }
+
+    #luck {
+
+        font-size: 16px;
+    }
 
     .result-box .btn {
         margin-right: 20px;
         margin-bottom: 20px;
         /* padding: 15px; */
         margin-top: 40px;
+    }
+
+    .try-again {
+        padding: 20px 60px;
+    }
+
+    .quit {
+        padding: 20px 45px;
     }
 }
 
@@ -391,5 +408,13 @@ body {
     .result-box h1 {
         font-size: 28px;
 
+    }
+
+    .try-again {
+        padding: 20px 60px;
+    }
+
+    .quit {
+        padding: 20px 45px;
     }
 }
