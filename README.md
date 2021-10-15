@@ -4,7 +4,7 @@ Welcome to my second milestone project, which was developed in HTML, CSS, and Ja
 
 This is a movie quiz, created with the purpose of entertaining movie lovers while testing their knowledge. It was designed to be responsive on a wide range of devices, while also being easy to navigate though.
 
-
+ ![website in several devices](https://user-images.githubusercontent.com/65717229/137511059-3b2ae671-5b3e-479f-96a0-bb79977e64c6.PNG)
 
 ## User Experience (UX)
 
