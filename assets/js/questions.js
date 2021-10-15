@@ -59,7 +59,7 @@ const quiz = [{
         answer: 2
     },
     {
-        question: 'Which Quentin Tarantino movie was the third biggest rated earner of 1994?',
+        question: 'Which Quentin Tarantino movie was the 3rd biggest rated earner of 1994?',
         options: ['Kill Bill: Volume 1', 'Pulp Fiction', 'Reservoir Dogs'],
         answer: 1
     },
@@ -84,8 +84,8 @@ const quiz = [{
         answer: 1
     },
     {
-        question: 'Which country does Forrest Gump travel to as part of the All-American Ping-Pong Team?',
-        options: ['China', 'Vietnam', 'Sweden'],
+        question: 'What is the name of the second James Bond film?',
+        options: ['From Russia With Love', 'Goldfinger', 'Dr. No'],
         answer: 0
     },
     {
@@ -94,13 +94,13 @@ const quiz = [{
         answer: 1
     },
     {
-        question: 'True or false: Sean Connery wore a toupee in every James Bond movie',
-        options: ['True', 'False'],
+        question: 'What year was the first Toy Story film released in cinemas?',
+        options: ['1995', '1996', '1998'],
         answer: 0
     },
     {
-        question: 'True or false: Speed is the only movie Sandra Bullock and Keanu Reeves have starred in together',
-        options: ['False', 'True'],
+        question: 'How many Academy Awards has Leonardo DiCaprio being nominated?',
+        options: ['6', '1', "0"],
         answer: 0
     },
     {
@@ -129,13 +129,13 @@ const quiz = [{
         answer: 1
     },
     {
-        question: "True or false: The Shining was Stephen King's first novel to be adapted into a movie",
-        options: ['False', 'True'],
+        question: "Who became the first woman to win a Best Director Oscar in 2010?",
+        options: ['Kathryn Bigelow', 'Rear Window', 'Greta Gerwig'],
         answer: 0
     },
     {
-        question: 'What song plays in the tunnel scene in Perks of Being a Wallflower?',
-        options: ['"Heroes" by David Bowie', '"Imagine" by John Lennon', '"High and Dry" by Radiohead'],
+        question: 'In which Austin Powers film does Beyoncé make her movie debut?',
+        options: ['Goldmember', 'The Spy Who Shagged Me', 'International Man of Mystery'],
         answer: 0
     },
     {
@@ -144,14 +144,14 @@ const quiz = [{
         answer: 2
     },
     {
-        question: 'True or false: In Django Unchained, Leonardo DiCaprio intentionally cut his hand during a scene',
-        options: ['False', 'True'],
+        question: 'Which Alfred Hitchcock film starred Grace Kelly as Lisa Carol Fremont?',
+        options: ['Rear Window', 'Vertigo', 'The Birds'],
         answer: 0
     },
     {
-        question: "What karaoke song does Cameron Diaz's character sing in My Best Friend's Wedding?",
-        options: ["I Just Don't Know What I'd Do With Myself", 'Could This Be Love', 'I Will Always Love You'],
-        answer: 0
+        question: "How many films have Al Pacino and Robert De Niro starred in together?",
+        options: ["3", '4', '5'],
+        answer: 1
     },
     {
         question: 'Which actor plays Private Ryan in Saving Private Ryan?',
@@ -209,8 +209,8 @@ const quiz = [{
         answer: 2
     },
     {
-        question: "Which Disney princess's dress changes colour as she dances with her prince at the end of the movie?",
-        options: ['Sleeping Beauty', 'Cinderella', 'Beauty and Beast'],
+        question: "Who starred as Neil Armstrong in Damien Chazelle’s biopic First Man?",
+        options: ['Ryan Gosling', 'Matt Damon', 'Brad Pitt'],
         answer: 0
     },
     {
@@ -224,8 +224,8 @@ const quiz = [{
         answer: 0
     },
     {
-        question: 'Who played the lead role in the 2001 film Lara Croft: Tomb Raider?',
-        options: ['Alicia Vikander', 'Angelina Jolie', 'Rachel Appleton'],
+        question: 'For which film did Sandra Bullock win her Oscar?',
+        options: ['Bird Box', 'The Blind Side', 'Gravity'],
         answer: 1
     }
 
