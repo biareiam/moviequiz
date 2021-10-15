@@ -59,7 +59,8 @@ The website is responsive, allowing people to interact with it on different devi
 ### Color Scheme
  -  The colors used on the trivia were chosen based on the background image used.
 
- ![color scheme](https://user-images.githubusercontent.com/65717229/135891976-10c0bb45-1018-402b-ae44-cf0eb0e4f4af.PNG)
+ ![color scheme](https://user-images.githubusercontent.com/65717229/137541669-5385dc2b-81b4-4dea-bc60-c0b79b28d7cb.PNG)
+
 
 
 
@@ -115,45 +116,49 @@ The wireframe of the site was created initially using Balsamiq and it can be see
 1. As a User, I want to easily understand how the quiz works.
     - Once the site is loaded, the user is presented with the instructions of how the quiz works.
 
-    ![rules](https://user-images.githubusercontent.com/65717229/136567637-7b197c48-1f53-42e6-8503-88221af1b305.PNG)
+    ![rules](https://user-images.githubusercontent.com/65717229/137541783-420d019c-f686-4221-8f34-cd7e0fc9f990.PNG)
 
 2. As a User, I want to easily understand how to start the quiz.
     - Once the site is loaded, a "Start" button is presented to the user.
 
-    ![start](https://user-images.githubusercontent.com/65717229/136567780-11777301-9f51-42a1-97ee-0bd5248e7917.PNG)
+    ![start](https://user-images.githubusercontent.com/65717229/137541827-b5637f77-40cb-4ea0-848a-97c08e4369f2.PNG)
 
-3. As a User, I want to be able to restart the quiz at any given moment.
+3. As a User, I want to be able to quit the quiz at any given moment.
     - While playing, a "quit" button is available to the user, located on the left side of the "Next bottom". It will direct the user to the home page, where they can leave the site or start the quiz again.
 
-    ![restart or quit](https://user-images.githubusercontent.com/65717229/136568025-b214c81d-7987-4e50-8411-3fa6e62a5488.PNG)
+    ![quit](https://user-images.githubusercontent.com/65717229/137541917-3a6838eb-3d31-4fad-b433-9fb6ec58e571.PNG)
 
-4. As a user, I want to be able to replay the game.
-    - The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
 
-    ![replay](https://user-images.githubusercontent.com/65717229/136568104-06278e69-e28e-4a47-84a8-9f982b371b25.PNG)
+4. As a user, I want to be able to see the questions.
+    - Once the user press the start button the questions are displayed.
+     ![questions_displayed](https://user-images.githubusercontent.com/65717229/137543282-fa008bec-3890-4ad1-b1ab-e9c2f5952a64.PNG)
 
 5. As a User, I want to see how many more questions I have to answer.
     - On the left upper corner, the user can see how many questions were already answered and how many more until the end of the quiz.
 
-    ![questions](https://user-images.githubusercontent.com/65717229/136568454-f1ab9156-df1c-4ea0-bce0-cbc950f4ffe8.PNG)
+    ![questions_counter](https://user-images.githubusercontent.com/65717229/137543321-f9e1376c-1b5b-47e6-b3ed-c0060d49eead.PNG)
 
 6. As a User, I want to know the correct answer of a question, if they got it wrong.
     - Straight after choosing an option, the user will know if it was correct or not. The correct answer is marked in green and the wrong one in red.
 
-    ![answer-correct](https://user-images.githubusercontent.com/65717229/136568559-66457d67-7941-4483-a37a-4b788c72df5a.PNG)
+    ![answer-correct](https://user-images.githubusercontent.com/65717229/137543369-8d9bf6c6-24d5-4695-adae-b5e5a5a8fc6e.PNG)
 
-    ![answer-wrong](https://user-images.githubusercontent.com/65717229/136568598-1fd2297e-3ff3-4f3b-8e2e-10bb062623a9.PNG)
+    ![answer-wrong](https://user-images.githubusercontent.com/65717229/137543749-e9500f96-eb81-4459-8a7e-a761dffadeda.PNG)
 
 7. As a User, I want to have a notion of how I am doing so far.
     - On the bottom of the quiz page, users can track their progress in the game up to that point.
 
-    ![progress](https://user-images.githubusercontent.com/65717229/136570333-1aa9676b-97c8-4293-b34b-572e1ab41347.PNG)    
+    ![progress](https://user-images.githubusercontent.com/65717229/137543549-ae753064-285e-46b4-9abf-ff9f5d1e30ca.png)    
 
 8. As a User, I want to have access to my score.
     - The user has access to the current score. Below the "Quit" and "Next" button, the user can see his/her progress, how many correct and incorrect answers so far. At the end of the quiz, the user will have a summary of it all. How many correct, incorrect, percentage and number of attempts.
 
-    ![score](https://user-images.githubusercontent.com/65717229/136570463-3449d733-b4c5-4cf7-ae40-1703d0c1d7a4.PNG)    
-    
+    ![score](https://user-images.githubusercontent.com/65717229/137543599-d6a512b7-1ef7-4b22-a436-63269b1cd96a.PNG)    
+
+9. As a user, I want to be able to replay the game.
+    - The user can restart the quiz upon a loss or a victory by pressing the "Try again" available on the "Quiz results" page.
+
+    ![replay](https://user-images.githubusercontent.com/65717229/137543624-a1b9f0a5-bcc0-4c05-9907-eaca120fc174.PNG)
 
 ## Further Testing
 * The project was tested on the following browsers: Google Chrome, Internet Explorer, Microsoft Edge, and Safari. It was designed to be responsive to many different devices: mobile, tablet and desktop.
