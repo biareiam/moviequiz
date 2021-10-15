@@ -227,7 +227,84 @@ const quiz = [{
         question: 'For which film did Sandra Bullock win her Oscar?',
         options: ['Bird Box', 'The Blind Side', 'Gravity'],
         answer: 1
+    },
+
+    {
+        question: 'The Nightmare Before Christmas was originally released when?',
+        options: ['1992', '1993', '1994'],
+        answer: 1
+    },
+    {
+        question: 'Who played Two Face in the movie "Batman Forever"?',
+        options: ['Tommy Lee Jones', 'Aaron Eckhart', 'Billy Dee Williams'],
+        answer: 0
+    },
+    {
+        question: 'Alicia Silverstone made her debut in which film?',
+        options: ['The Crush', 'Clueless', 'The Babysitter'],
+        answer: 0
+    },
+    {
+        question: 'When do the events of the movie "The Polar Express" take place?',
+        options: ['Christmas Day', 'Christmas Eve', 'Day after Christmas'],
+        answer: 1
+    },
+    {
+        question: 'On which real-life serial killer was the killer in "Scream" based?',
+        options: ['Jeffrey Dahmer', 'Dennis Nilsen', 'Danny Rolling'],
+        answer: 2
+    },
+    {
+        question: 'The code in The Matrix comes from what food recipes?',
+        options: ['Dumpling recipes', 'Sushi recipes', 'Pad thai recipes'],
+        answer: 1
+    },
+    {
+        question: 'Who was the first Black person to win an Oscar?',
+        options: ['James Earl Jones', 'Sidney Poitier', 'Hattie McDaniel'],
+        answer: 2
+    },
+    {
+        question: 'Who did the cat in The Godfather belong to?',
+        options: ['Francis Ford Coppola', 'No one—the cat was a stray', 'Al Pachino'],
+        answer: 1
+    },
+    {
+        question: 'What was the top-grossing movie of 2014?',
+        options: ['The Lego Movie', 'Captain America: The Winter Soldier ', 'Guardians of the Galaxy'],
+        answer: 2
+    },
+    {
+        question: 'Who directed the hit 2017 movie Get Out?',
+        options: ['James Wan', 'Jordan Peele', 'Tim Story'],
+        answer: 1
+    },
+    {
+        question: 'How many Oscars has Halle Berry won?',
+        options: ['0', '1', '3'],
+        answer: 1
+    },
+    {
+        question: 'Which movie is this quote from: “What’s in the box?”',
+        options: ['Reservoir Dogs', 'Se7en ', 'Speed '],
+        answer: 1
+    },
+    {
+        question: 'Who directed Silence of the Lambs?',
+        options: ['Wes Anderson', 'Jonathan Demme', 'Christopher Nolan'],
+        answer: 1
+    },
+    {
+        question: 'Who played Wendy Torrance in The Shining?',
+        options: ['Cher', 'Shelley Duvall', 'Linda Ronstadt'],
+        answer: 1
+    },
+    {
+        question: 'Which movie was Spike Lee’s first feature film?',
+        options: ['Do The Right Thing ', 'She’s Gotta Have It ', 'Malcolm X'],
+        answer: 1
     }
+
 
 
 ]
