@@ -190,7 +190,7 @@ To deploy my website to GitHub Pages, the following steps were taken:
 * Scroll down the Settings page until the "GitHub Pages" Section was found
 * Under "Source", click the dropdown called "None" and select "Master Branch"
 * The page will refresh and you will be brought back to the top of the settings page
-* Scroll back down through the page to locate the now published site [link](https://biareiam.github.io/movie/) in the "GitHub Pages" section
+* Scroll back down through the page to locate the now published site [link](https://biareiam.github.io/moviequiz/) in the "GitHub Pages" section
 * The code can be run locally through clone or download, you can do this by opening the repository, clicking on the code button and then selecting either 'clone' or 'download'
 * The Clone option provides a url, which you can use on your desktop IDE
 
